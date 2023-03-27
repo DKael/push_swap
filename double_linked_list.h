@@ -10,9 +10,9 @@ typedef enum e_bool
 
 typedef struct s_dllnode
 {
-	t_dllnode	*front;
-	t_dllnode	*back;
-	void		*contents;
+	struct s_dllnode	*front;
+	struct s_dllnode	*back;
+	void				*contents;
 }	t_dllnode;
 
 typedef struct s_dll
