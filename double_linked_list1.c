@@ -18,6 +18,7 @@ void dll_add_head(t_dll *dll, t_dllnode *new)
 	dll->size++;
 }
 
+
 void dll_add_tail(t_dll *dll, t_dllnode *new)
 {
 	new->front = dll->tail.front;
@@ -26,6 +27,7 @@ void dll_add_tail(t_dll *dll, t_dllnode *new)
 	dll->tail.front = new;
 	dll->size++;
 }
+
 
 t_bool dll_is_in(t_dll *dll, t_dllnode *check)
 {
