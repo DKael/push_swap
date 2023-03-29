@@ -178,11 +178,12 @@ int main(int argc, char **argv)
 		int pivot1;
 		int pivot2;
 
-		pivot1 = sorted_input[input_count / 3];
-		pivot2 = sorted_input[input_count * 2 / 3];
+		pivot1 = sorted_input[input_count / 3 - 1];
+		pivot2 = sorted_input[input_count * 2 / 3 - 1];
 		printf("\n%d %d\n", pivot1, pivot2);
 
 		// do push_swap
+		// split three part
 		int temp;
 		idx = 0;
 		while (++idx <= input_count)
@@ -198,66 +199,99 @@ int main(int argc, char **argv)
 				rb(&B);
 			}
 		}
-
-		while (A.size != 0)
-			pb(&A, &B);
-
-		int minimum;
-		int maximum;
-
-		pa(&A, &B);
-		pa(&A, &B);
-		if (dll_node_compare(A.head.back, A.tail.front, compare_func))
-			sa(&A);
-		minimum = *(int *)A.head.back->contents;
-		maximum = *(int *)A.tail.front->contents;
-		while (B.size != 0)
-		{
-			if (dll_node_compare(A.head.back, B.head.back, compare_func))
-			{
-				if (dll_node_compare(A.tail.front, B.head.back, compare_func))
-				{
-					if (maximum == *(int *)A.head.back->contents)
-					{
-						pa(&A, &B);
-						maximum = *(int *)A.head.back->contents;
-					}
-					else
-						rra(&A);
-				}
-				else
-					pa(&A, &B);
-			}
-			else
-			{
-				if (!dll_node_compare(A.tail.front, B.head.back, compare_func))
-				{
-					if (minimum == *(int *)A.head.back->contents)
-					{
-						pa(&A, &B);
-						minimum = *(int *)A.head.back->contents;
-					}
-					else
-						ra(&A);
-				}
-				else
-					pa(&A, &B);
-			}
-		}
-
-		printf("\nA stack : ");
+		fprintf(stderr, "\nA stack : ");
 		dtemp = A.head.back;
 		while (dtemp != &(A.tail))
 		{
-			printf("%d ", *(int *)dtemp->contents);
+			fprintf(stderr, "%d ", *(int *)dtemp->contents);
 			dtemp = dtemp->back;
 		}
 
-		printf("\nB stack : ");
+		fprintf(stderr, "\nB stack : ");
 		dtemp = B.head.back;
 		while (dtemp != &(B.tail))
 		{
-			printf("%d ", *(int *)dtemp->contents);
+			fprintf(stderr, "%d ", *(int *)dtemp->contents);
+			dtemp = dtemp->back;
+		}
+
+		// sorting2
+		idx = 0;
+		while (idx <= input_count - 3)
+		{
+			rra(&A);
+			pa(&A, &B);
+			rrb(&B);
+			pa(&A, &B);
+			idx += 3;
+		}
+		if (input_count % 3 == 2)
+		{
+			fprintf(stderr, "remain 2!");
+			rra(&A);
+			pa(&A, &B);
+		}
+		else if (input_count % 3 == 1)
+		{
+			fprintf(stderr, "remain 1!");
+			rra(&A);
+		}
+			
+
+		// sorting1
+		//  while (A.size != 0)
+		//  	pb(&A, &B);
+		//  int cur_idx;
+		//  cur_idx = 0;
+		//  pa(&A, &B);
+		//  pa(&A, &B);
+		//  if (dll_node_compare(A.head.back, A.tail.front, compare_func))
+		//  	sa(&A);
+		//  while (B.size != 0)
+		//  {
+		//  	if (!dll_node_compare(B.head.back, B.head.back->back, compare_func))
+		//  		sb(&B);
+		//  	if (dll_node_compare(A.head.back, B.head.back, compare_func))
+		//  	{
+		//  		if (dll_node_compare(A.tail.front, B.head.back, compare_func))
+		//  		{
+		//  			if (dll_node_compare(A.tail.front, A.head.back, compare_func))
+		//  				pa(&A, &B);
+		//  			else
+		//  				rra(&A);
+		//  		}
+		//  		else
+		//  			pa(&A, &B);
+		//  	}
+		//  	else
+		//  	{
+		//  		if (!dll_node_compare(A.tail.front, B.head.back, compare_func))
+		//  		{
+		//  			if (dll_node_compare(A.tail.front, A.head.back, compare_func))
+		//  				pa(&A, &B);
+		//  			else
+		//  				ra(&A);
+		//  		}
+		//  		else
+		//  			ra(&A);
+		//  	}
+		//  }
+		//  while (!dll_node_compare(A.tail.front, A.head.back, compare_func))
+		//  	ra(&A);
+
+		fprintf(stderr, "\nA stack : ");
+		dtemp = A.head.back;
+		while (dtemp != &(A.tail))
+		{
+			fprintf(stderr, "%d ", *(int *)dtemp->contents);
+			dtemp = dtemp->back;
+		}
+
+		fprintf(stderr, "\nB stack : ");
+		dtemp = B.head.back;
+		while (dtemp != &(B.tail))
+		{
+			fprintf(stderr, "%d ", *(int *)dtemp->contents);
 			dtemp = dtemp->back;
 		}
 

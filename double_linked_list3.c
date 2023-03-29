@@ -29,9 +29,12 @@ void dll_del_node(t_dll *dll, t_dllnode *node, void (*del)(void *))
 
 int	dll_node_compare(t_dllnode *n1, t_dllnode *n2, int (*compare)(t_dllnode *, t_dllnode *))
 {
-	if (compare(n1, n2) == 1)
+	int result;
+
+	result = compare(n1, n2);
+	if (result == 1)
 		return (1);
-	else if (compare(n1, n2) == -1)
+	else if (result == -1)
 		return (-1);
 	else
 		return (0);
