@@ -13,6 +13,7 @@ typedef struct s_dllnode
 	struct s_dllnode	*front;
 	struct s_dllnode	*back;
 	void				*contents;
+	int					is_floor;
 }	t_dllnode;
 
 typedef struct s_dll

@@ -199,44 +199,92 @@ int main(int argc, char **argv)
 				rb(&B);
 			}
 		}
-		fprintf(stderr, "\nA stack : ");
-		dtemp = A.head.back;
-		while (dtemp != &(A.tail))
-		{
-			fprintf(stderr, "%d ", *(int *)dtemp->contents);
-			dtemp = dtemp->back;
-		}
+		while (A.size != 3)
+			pb(&A, &B);
 
-		fprintf(stderr, "\nB stack : ");
-		dtemp = B.head.back;
-		while (dtemp != &(B.tail))
+		
+
+		// sorting3
+		int idx_a;
+		int idx_b;
+
+		while (B.size != 0)
 		{
-			fprintf(stderr, "%d ", *(int *)dtemp->contents);
-			dtemp = dtemp->back;
+			idx_a = 0;
+			idx_b = 0;
 		}
 
 		// sorting2
-		idx = 0;
-		while (idx <= input_count - 3)
-		{
-			rra(&A);
-			pa(&A, &B);
-			rrb(&B);
-			pa(&A, &B);
-			idx += 3;
-		}
-		if (input_count % 3 == 2)
-		{
-			fprintf(stderr, "remain 2!");
-			rra(&A);
-			pa(&A, &B);
-		}
-		else if (input_count % 3 == 1)
-		{
-			fprintf(stderr, "remain 1!");
-			rra(&A);
-		}
-			
+		// int floor_count;
+		// floor_count = 0;
+		// idx = 0;
+		// while (idx <= input_count - 3)
+		// {
+		// 	rra(&A);
+		// 	A.head.back->is_floor = 1;
+		// 	floor_count++;
+		// 	pa(&A, &B);
+		// 	A.head.back->is_floor = 0;
+		// 	rrb(&B);
+		// 	pa(&A, &B);
+		// 	A.head.back->is_floor = 0;
+		// 	idx += 3;
+		// }
+		// if (input_count % 3 == 2)
+		// {
+		// 	fprintf(stderr, "remain 2!");
+		// 	rra(&A);
+		// 	A.head.back->is_floor = 1;
+		// 	floor_count++;
+		// 	pa(&A, &B);
+		// 	A.head.back->is_floor = 0;
+		// }
+		// else if (input_count % 3 == 1)
+		// {
+		// 	fprintf(stderr, "remain 1!");
+		// 	rra(&A);
+		// 	A.head.back->is_floor = 1;
+		// 	floor_count++;
+		// }
+		// while (floor_count != 1)
+		// {
+		// 	rra(&A);
+		// 	pb(&A, &B);
+		// 	while (A.tail.front->is_floor != 1)
+		// 	{
+		// 		rra(&A);
+		// 		pb(&A, &B);
+		// 		rb(&B);
+		// 	}
+		// 	if (dll_node_compare(A.tail.front, B.head.back, compare_func))
+		// 	{
+		// 		rra(&A);
+		// 		B.head.back->is_floor = 0;
+		// 	}
+		// 	else
+		// 	{
+		// 		pa(&A, &B);
+		// 		A.tail.front->is_floor = 0;
+		// 	}
+		// 	while (A.tail.front->is_floor != 1 && B.size != 0)
+		// 	{
+		// 		if (dll_node_compare(A.tail.front, B.head.back, compare_func))
+		// 			rra(&A);
+		// 		else
+		// 			pa(&A, &B);
+		// 	}
+		// 	if (A.tail.front->is_floor == 1)
+		// 	{
+		// 		while (B.size != 0)
+		// 			pa(&A, &B);
+		// 	}
+		// 	else if (B.size == 0)
+		// 	{
+		// 		while (A.tail.front->is_floor != 1)
+		// 			rra(&A);
+		// 	}
+		// 	floor_count--;
+		// }
 
 		// sorting1
 		//  while (A.size != 0)
