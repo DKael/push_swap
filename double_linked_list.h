@@ -13,7 +13,6 @@ typedef struct s_dllnode
 	struct s_dllnode	*front;
 	struct s_dllnode	*back;
 	void				*contents;
-	int					is_floor;
 }	t_dllnode;
 
 typedef struct s_dll
@@ -22,6 +21,16 @@ typedef struct s_dll
 	t_dllnode	tail;
 	int			size;
 }	t_dll;
+
+typedef struct s_r_info
+{
+	int calc_rotate;
+	int flag;
+	int a_check;
+	int b_check;
+	int a_size;
+	int b_size;
+}	t_r_info;
 
 void		dll_init(t_dll *dll);
 void		dll_add_head(t_dll *dll, t_dllnode *new);
