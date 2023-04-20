@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap4.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 20:01:17 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 20:01:19 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
-t_r_info calc_minimum_rotate1(int a_size, int b_size, int a_idx, int b_idx)
+
+t_r_info	calc_minimum_rotate1(int a_size, int b_size, int a_idx, int b_idx)
 {
-	t_r_info info;
+	t_r_info	info;
 
 	if (a_idx * 2 < a_size && b_idx * 2 < b_size)
 	{
@@ -24,20 +36,18 @@ t_r_info calc_minimum_rotate1(int a_size, int b_size, int a_idx, int b_idx)
 	return (info);
 }
 
-
-t_r_info calc_minimum_rotate2(int a_size, int b_size, int a_idx, int b_idx)
+t_r_info	calc_minimum_rotate2(int a_size, int b_size, int a_idx, int b_idx)
 {
-
 	if (a_idx * 2 < a_size && b_idx * 2 >= b_size)
 		return (calc_minimum_rotate3(a_size, b_size, a_idx, b_idx));
 	else
 		return (calc_minimum_rotate4(a_size, b_size, a_idx, b_idx));
 }
 
-t_r_info calc_minimum_rotate3(int a_size, int b_size, int a_idx, int b_idx)
+t_r_info	calc_minimum_rotate3(int a_size, int b_size, int a_idx, int b_idx)
 {
-	t_r_info info;
-	int temp_calc;
+	t_r_info	info;
+	int			temp_calc;
 
 	info.calc_rotate = a_idx + b_size - b_idx;
 	if (b_idx < a_size - a_idx)
@@ -57,10 +67,10 @@ t_r_info calc_minimum_rotate3(int a_size, int b_size, int a_idx, int b_idx)
 	return (info);
 }
 
-t_r_info calc_minimum_rotate4(int a_size, int b_size, int a_idx, int b_idx)
+t_r_info	calc_minimum_rotate4(int a_size, int b_size, int a_idx, int b_idx)
 {
-	t_r_info info;
-	int temp_calc;
+	t_r_info	info;
+	int			temp_calc;
 
 	info.calc_rotate = b_idx + a_size - a_idx;
 	if (a_idx < b_size - b_idx)
@@ -73,7 +83,6 @@ t_r_info calc_minimum_rotate4(int a_size, int b_size, int a_idx, int b_idx)
 		temp_calc = b_size - b_idx;
 		info.flag = 8;
 	}
-
 	if (temp_calc < info.calc_rotate)
 		info.calc_rotate = temp_calc;
 	else
@@ -81,7 +90,7 @@ t_r_info calc_minimum_rotate4(int a_size, int b_size, int a_idx, int b_idx)
 	return (info);
 }
 
-void set_location(int *a_rotate, int *b_rotate, t_r_info info)
+void	set_location(int *a_rotate, int *b_rotate, t_r_info info)
 {
 	if (info.flag == 1 || info.flag == 4 || info.flag == 7)
 	{

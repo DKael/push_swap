@@ -1,20 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_instructions1.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 19:59:06 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 19:59:07 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void sa(t_dll *a)
+void	sa(t_dll *a)
 {
 	write(1, "sa\n", 3);
 	if (a->size >= 2)
 		dll_swap_node(a->head.back, a->head.back->back);
 }
 
-void sb(t_dll *b)
+void	sb(t_dll *b)
 {
 	write(1, "sb\n", 3);
 	if (b->size >= 2)
 		dll_swap_node(b->head.back, b->head.back->back);
 }
 
-void ss(t_dll *a, t_dll *b)
+void	ss(t_dll *a, t_dll *b)
 {
 	write(1, "ss\n", 3);
 	if (a->size >= 2)
@@ -23,9 +34,9 @@ void ss(t_dll *a, t_dll *b)
 		dll_swap_node(b->head.back, b->head.back->back);
 }
 
-void pa(t_dll *a, t_dll *b)
+void	pa(t_dll *a, t_dll *b)
 {
-	t_dllnode *temp;
+	t_dllnode	*temp;
 
 	write(1, "pa\n", 3);
 	if (b->size >= 2)
@@ -44,9 +55,9 @@ void pa(t_dll *a, t_dll *b)
 	}
 }
 
-void pb(t_dll *a, t_dll *b)
+void	pb(t_dll *a, t_dll *b)
 {
-	t_dllnode *temp;
+	t_dllnode	*temp;
 
 	write(1, "pb\n", 3);
 	if (a->size >= 2)

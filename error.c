@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 19:52:44 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 19:52:46 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void array_free(int argc, char ***argv_split)
+void	array_free(int argc, char ***argv_split)
 {
-	int argv_idx;
-	int split_idx;
+	int	argv_idx;
+	int	split_idx;
 
 	argv_idx = -1;
 	while (++argv_idx < argc - 1)
@@ -16,7 +27,7 @@ void array_free(int argc, char ***argv_split)
 	free(argv_split);
 }
 
-void error_print(int argc, char ***argv_split, int flag)
+void	error_print(int argc, char ***argv_split, int flag)
 {
 	if (flag == 1)
 		write(1, "Error\n", 6);
@@ -24,7 +35,7 @@ void error_print(int argc, char ***argv_split, int flag)
 	exit(1);
 }
 
-void remove_contents(void *content)
+void	remove_contents(void *content)
 {
 	free(content);
 }

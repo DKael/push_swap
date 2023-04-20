@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   double_linked_list3.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 19:44:10 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 19:44:13 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "double_linked_list.h"
 
-void dll_del_node(t_dll *dll, t_dllnode *node, void (*del)(void *))
+void	dll_del_node(t_dll *dll, t_dllnode *node, void (*del)(void *))
 {
 	if (dll_is_in(dll, node) == true)
 	{
@@ -27,9 +39,10 @@ void dll_del_node(t_dll *dll, t_dllnode *node, void (*del)(void *))
 	}
 }
 
-int	dll_node_compare(t_dllnode *n1, t_dllnode *n2, int (*compare)(t_dllnode *, t_dllnode *))
+int	dll_node_compare(t_dllnode *n1, t_dllnode *n2,
+	int (*compare)(t_dllnode *, t_dllnode *))
 {
-	int result;
+	int	result;
 
 	result = compare(n1, n2);
 	if (result == 1)

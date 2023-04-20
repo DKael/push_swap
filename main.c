@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 19:53:20 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 19:53:21 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 #include "error.c"
@@ -20,7 +31,7 @@
 #include "double_linked_list2.c"
 #include "double_linked_list3.c"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		input_count;
 	char	***argv_split;
@@ -33,7 +44,7 @@ int main(int argc, char **argv)
 		input_count = count_total_numeric_input(argc, argv_split);
 		sorted_input = make_array_use_to_check(input_count, argc, argv_split);
 		if (is_sorted(input_count, sorted_input) == 1)
-			return (0);		
+			return (0);
 		array_free(argc, argv_split);
 		do_push_swap(input_count, sorted_input);
 		free(sorted_input);

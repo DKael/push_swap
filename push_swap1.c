@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap1.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 20:01:05 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 20:01:06 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 // #include <stdio.h>
@@ -20,18 +31,20 @@
 // 	}
 // }
 
-void do_push_swap(int input_count, int *sorted_input)
+void	do_push_swap(int input_count, int *sorted_input)
 {
-	t_dll a;
-	t_dll b;
-	int a_rotate;
-	int b_rotate;
+	t_dll	a;
+	t_dll	b;
+	int		a_rotate;
+	int		b_rotate;
 
 	dll_init(&a);
 	dll_init(&b);
 	make_stack(&a, input_count, sorted_input);
 	sorting(sorted_input, input_count);
 	check_duplications(&a, input_count, sorted_input);
+	if (a.size <= 3)
+		return (sort_2or3(&a));
 	split_by_pivot(input_count, sorted_input, &a, &b);
 	sort_2or3(&a);
 	while (b.size != 0)
@@ -47,11 +60,11 @@ void do_push_swap(int input_count, int *sorted_input)
 	dll_clear(&b, remove_contents);
 }
 
-void make_stack(t_dll *a, int input_count, int *sorted_input)
+void	make_stack(t_dll *a, int input_count, int *sorted_input)
 {
-	t_dllnode *dtemp;
-	int *ctemp;
-	int idx;
+	t_dllnode	*dtemp;
+	int			*ctemp;
+	int			idx;
 
 	idx = -1;
 	while (++idx < input_count)
@@ -71,12 +84,11 @@ void make_stack(t_dll *a, int input_count, int *sorted_input)
 		}
 		dll_add_tail(a, dtemp);
 	}
-	
 }
 
-void check_duplications(t_dll *a, int input_count, int *sorted_input)
+void	check_duplications(t_dll *a, int input_count, int *sorted_input)
 {
-	int idx;
+	int	idx;
 
 	idx = -1;
 	while (++idx < input_count - 1)
@@ -84,17 +96,18 @@ void check_duplications(t_dll *a, int input_count, int *sorted_input)
 		if (sorted_input[idx] == sorted_input[idx + 1])
 		{
 			dll_clear(a, remove_contents);
+			write(1, "Error\n", 6);
 			exit(1);
 		}
 	}
 }
 
-void split_by_pivot(int input_count, int *sorted_input, t_dll *a, t_dll *b)
+void	split_by_pivot(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 {
-	int temp;
-	int idx;
-	int pivot1;
-	int pivot2;
+	int	temp;
+	int	idx;
+	int	pivot1;
+	int	pivot2;
 
 	idx = 0;
 	pivot1 = sorted_input[input_count / 3 - 1];
@@ -112,11 +125,11 @@ void split_by_pivot(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 			rb(b);
 		}
 	}
-	while (a->size != 3)
+	while (a->size > 3)
 		pb(a, b);
 }
 
-int compare_func(t_dllnode *n1, t_dllnode *n2)
+int	compare_func(t_dllnode *n1, t_dllnode *n2)
 {
 	if (*(int *)n1->contents > *(int *)n2->contents)
 		return (1);

@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   double_linked_list1.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 19:43:24 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 19:43:26 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "double_linked_list.h"
 
-void dll_init(t_dll *dll)
+void	dll_init(t_dll *dll)
 {
 	dll->head.front = NULL;
 	dll->head.back = &(dll->tail);
@@ -9,7 +20,7 @@ void dll_init(t_dll *dll)
 	dll->size = 0;
 }
 
-void dll_add_head(t_dll *dll, t_dllnode *new)
+void	dll_add_head(t_dll *dll, t_dllnode *new)
 {
 	new->front = &(dll->head);
 	new->back = dll->head.back;
@@ -18,8 +29,7 @@ void dll_add_head(t_dll *dll, t_dllnode *new)
 	dll->size++;
 }
 
-
-void dll_add_tail(t_dll *dll, t_dllnode *new)
+void	dll_add_tail(t_dll *dll, t_dllnode *new)
 {
 	new->front = dll->tail.front;
 	new->back = &(dll->tail);
@@ -28,10 +38,9 @@ void dll_add_tail(t_dll *dll, t_dllnode *new)
 	dll->size++;
 }
 
-
-t_bool dll_is_in(t_dll *dll, t_dllnode *check)
+t_bool	dll_is_in(t_dll *dll, t_dllnode *check)
 {
-	t_dllnode *next_node;
+	t_dllnode	*next_node;
 
 	next_node = dll->head.back;
 	while (next_node != &(dll->tail))
@@ -42,9 +51,9 @@ t_bool dll_is_in(t_dll *dll, t_dllnode *check)
 	return (false);
 }
 
-t_dllnode *dll_find(t_dll *dll, void *contents, int (*f)(void *, void *))
+t_dllnode	*dll_find(t_dll *dll, void *contents, int (*f)(void *, void *))
 {
-	t_dllnode *next_node;
+	t_dllnode	*next_node;
 
 	next_node = dll->head.back;
 	while (next_node != &(dll->tail))
@@ -54,4 +63,3 @@ t_dllnode *dll_find(t_dll *dll, void *contents, int (*f)(void *, void *))
 	}
 	return (NULL);
 }
-

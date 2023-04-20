@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_instructions2.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 19:59:12 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 19:59:14 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void ra(t_dll *a)
+void	ra(t_dll *a)
 {
-	t_dllnode *temp;
+	t_dllnode	*temp;
 
 	write(1, "ra\n", 3);
 	if (a->size >= 2)
@@ -15,9 +26,9 @@ void ra(t_dll *a)
 	}
 }
 
-void rb(t_dll *b)
+void	rb(t_dll *b)
 {
-	t_dllnode *temp;
+	t_dllnode	*temp;
 
 	write(1, "rb\n", 3);
 	if (b->size >= 2)
@@ -30,9 +41,9 @@ void rb(t_dll *b)
 	}
 }
 
-void rr(t_dll *a, t_dll *b)
+void	rr(t_dll *a, t_dll *b)
 {
-	t_dllnode *temp;
+	t_dllnode	*temp;
 
 	write(1, "rr\n", 3);
 	if (a->size >= 2)

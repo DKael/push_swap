@@ -13,10 +13,10 @@
 
 #include "libft/ft_atoi_int.c"
 
-char ***argument_split(int argc, char **argv)
+char	***argument_split(int argc, char **argv)
 {
-	char ***argv_split;
-	int argv_idx;
+	char	***argv_split;
+	int		argv_idx;
 
 	argv_split = (char ***)malloc(sizeof(char **) * (argc - 1));
 	if (argv_split == NULL)
@@ -36,12 +36,12 @@ char ***argument_split(int argc, char **argv)
 	return (argv_split);
 }
 
-void check_non_numeric_character(int argc, char ***argv_split)
+void	check_non_numeric_character(int argc, char ***argv_split)
 {
-	int argv_idx;
-	int split_idx;
-	int idx;
-	char temp;
+	int		argv_idx;
+	int		split_idx;
+	int		idx;
+	char	temp;
 
 	argv_idx = -1;
 	while (++argv_idx < argc - 1)
@@ -64,11 +64,11 @@ void check_non_numeric_character(int argc, char ***argv_split)
 	}
 }
 
-int count_total_numeric_input(int argc, char ***argv_split)
+int	count_total_numeric_input(int argc, char ***argv_split)
 {
-	int argv_idx;
-	int input_count;
-	int split_idx;
+	int	argv_idx;
+	int	input_count;
+	int	split_idx;
 
 	argv_idx = -1;
 	input_count = 0;
@@ -81,25 +81,26 @@ int count_total_numeric_input(int argc, char ***argv_split)
 	return (input_count);
 }
 
-int *make_array_use_to_check(int input_count, int argc, char ***argv_split)
+int	*make_array_use_to_check(int input_count, int argc, char ***argv_split)
 {
-	int *sorted_input;
-	int argv_idx;
-	int sorted_idx;
-	int split_idx;
+	int	*sorted_input;
+	int	a_idx;
+	int	st_idx;
+	int	sp_idx;
 
 	sorted_input = (int *)malloc(sizeof(int) * input_count);
 	if (sorted_input == NULL)
 		error_print(argc, argv_split, 0);
-	argv_idx = -1;
-	sorted_idx = -1;
-	while (++argv_idx < argc - 1)
+	a_idx = -1;
+	st_idx = -1;
+	while (++a_idx < argc - 1)
 	{
-		split_idx = -1;
-		while (argv_split[argv_idx][++split_idx] != NULL)
+		sp_idx = -1;
+		while (argv_split[a_idx][++sp_idx] != NULL)
 		{
-			sorted_input[++sorted_idx] = ft_atoi_int(argv_split[argv_idx][split_idx]);
-			if ((sorted_input[sorted_idx] == 0 && argv_split[argv_idx][split_idx][0] != '0'))
+			sorted_input[++st_idx] = ft_atoi_int(argv_split[a_idx][sp_idx]);
+			if (sorted_input[st_idx] == 0
+				&& argv_split[a_idx][sp_idx][0] != '0')
 			{
 				free(sorted_input);
 				error_print(argc, argv_split, 1);
@@ -109,7 +110,7 @@ int *make_array_use_to_check(int input_count, int argc, char ***argv_split)
 	return (sorted_input);
 }
 
-int is_sorted(int input_count, int *sorted_input)
+int	is_sorted(int input_count, int *sorted_input)
 {
 	int	is_sorted;
 	int	idx;
@@ -121,7 +122,7 @@ int is_sorted(int input_count, int *sorted_input)
 		if (sorted_input[idx] >= sorted_input[idx + 1])
 		{
 			is_sorted = 0;
-			break;
+			break ;
 		}
 	}
 	if (is_sorted == 1)

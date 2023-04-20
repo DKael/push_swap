@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap5.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 20:01:21 by dmkael            #+#    #+#             */
+/*   Updated: 2023/04/20 20:01:22 by dmkael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void do_rotate1(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
+void	do_rotate1(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 {
 	if (a_rotate >= 0 && b_rotate >= 0)
 		do_rotate2(a_rotate, b_rotate, a, b);
@@ -8,13 +19,13 @@ void do_rotate1(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 		do_rotate3(a_rotate, b_rotate, a, b);
 	else if (a_rotate >= 0 && b_rotate <= 0)
 		do_rotate4(a_rotate, b_rotate, a, b);
-	else 
+	else
 		do_rotate5(a_rotate, b_rotate, a, b);
 }
 
-void do_rotate2(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
+void	do_rotate2(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 {
-	int idx1;
+	int	idx1;
 
 	idx1 = -1;
 	if (a_rotate >= b_rotate)
@@ -32,9 +43,10 @@ void do_rotate2(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 			rb(b);
 	}
 }
-void do_rotate3(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
+
+void	do_rotate3(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 {
-	int idx1;
+	int	idx1;
 
 	idx1 = -1;
 	a_rotate *= -1;
@@ -55,9 +67,9 @@ void do_rotate3(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 	}
 }
 
-void do_rotate4(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
+void	do_rotate4(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 {
-	int idx1;
+	int	idx1;
 
 	idx1 = 0;
 	b_rotate *= -1;
@@ -74,9 +86,9 @@ void do_rotate4(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 	}
 }
 
-void do_rotate5(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
+void	do_rotate5(int a_rotate, int b_rotate, t_dll *a, t_dll *b)
 {
-	int idx1;
+	int	idx1;
 
 	idx1 = 0;
 	a_rotate *= -1;
