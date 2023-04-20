@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-// #include "libft/ft_atoi_int.c"
-
 char	***argument_split(int argc, char **argv)
 {
 	char	***argv_split;

@@ -19,6 +19,13 @@ SRCS =	main.c \
 		push_swap4.c \
 		push_swap5.c \
 		push_swap6.c \
+		double_linked_list1.c \
+		double_linked_list2.c \
+		double_linked_list3.c \
+		quick_sort.c \
+		stack_instructions1.c \
+		stack_instructions2.c \
+		stack_instructions3.c \
 
 OBJS = 	${SRCS:.c=.o}
 
@@ -41,17 +48,25 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
+LDFLAGS = -L. -lft
+
 NAME = push_swap
 
-# ifdef WITH_BONUS
-# 	TOTAL_OBJS = ${OBJS_BONUS}
-# else
-# 	TOTAL_OBJS = ${OBJS}
-# endif
+LIBFT_DIR = libft
 
-${NAME} : ${OBJS}
-		ar -rsc $@ $^
-	
+LIBFT_NAME = libft.a
+
+ifdef WITH_BONUS
+	TOTAL_OBJS = ${OBJS_BONUS}
+else
+	TOTAL_OBJS = ${OBJS}
+endif
+
+${NAME} : ${TOTAL_OBJS}
+		make -C ${LIBFT_DIR} all
+		cp ${LIBFT_DIR}/${LIBFT_NAME} ${LIBFT_NAME}
+		${CC} ${CFLAGS} ${LDFLAGS} ${TOTAL_OBJS} -o $@
+
 %.o :%.c
 	${CC} ${CFLAGS} -c -I. $< -o $@
 
@@ -63,7 +78,9 @@ clean:
 
 fclean: 
 	make clean
-	rm -f ${NAME} ${LIBFT_NAME}
+	rm -f ${LIBFT_DIR}/${LIBFT_NAME}
+	rm -f ${LIBFT_NAME}
+	rm -f ${NAME}
 
 re: 
 	make fclean
