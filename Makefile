@@ -3,92 +3,71 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+         #
+#    By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/28 13:30:01 by hyungdki          #+#    #+#              #
-#    Updated: 2022/12/28 13:30:02 by hyungdki         ###   ########.fr        #
+#    Created: 2023/04/20 20:46:38 by dmkael            #+#    #+#              #
+#    Updated: 2023/04/20 20:46:40 by dmkael           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+SRCS =	main.c \
+		push_swap_error.c \
+		push_swap_parsing.c \
+		push_swap1.c \
+		push_swap2.c \
+		push_swap3.c \
+		push_swap4.c \
+		push_swap5.c \
+		push_swap6.c \
+
+OBJS = 	${SRCS:.c=.o}
+
+# SRCS_BONUS =	ft_printf_bonus.c \
+# 				ft_printf_utils_bonus.c \
+# 				case_c_bonus.c \
+# 				case_d_and_i_bonus.c \
+# 				case_p_bonus.c \
+# 				case_percent_bonus.c \
+# 				case_s_bonus.c \
+# 				case_u_bonus.c \
+# 				case_x_bonus.c \
+# 				ft_itoa_hex_bonus.c \
+# 				ft_itoa_ptr_bonus.c \
+# 				ft_itoa_unsigned_bonus.c
+
+# OBJS_BONUS = 	${SRCS_BONUS:.c=.o}
 
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS =	ft_atoi.c \
-		ft_bzero.c \
-		ft_calloc.c \
-		ft_isalnum.c \
-		ft_isalpha.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_isprint.c \
-		ft_itoa.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memset.c \
-		ft_putchar_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_putstr_fd.c \
-		ft_split.c \
-		ft_strchr.c \
-		ft_strdup.c \
-		ft_striteri.c \
-		ft_strjoin.c \
-		ft_strlcat.c \
-		ft_strlcpy.c \
-		ft_strlen.c \
-		ft_strmapi.c \
-		ft_strncmp.c \
-		ft_strnstr.c \
-		ft_strrchr.c \
-		ft_strtrim.c \
-		ft_substr.c \
-		ft_tolower.c \
-		ft_toupper.c
+NAME = push_swap
 
-OBJS = 	${SRCS:.c=.o}
+# ifdef WITH_BONUS
+# 	TOTAL_OBJS = ${OBJS_BONUS}
+# else
+# 	TOTAL_OBJS = ${OBJS}
+# endif
 
-SRCS_BONUS =	ft_lstadd_back.c \
-				ft_lstadd_front.c \
-				ft_lstclear.c \
-				ft_lstdelone.c \
-				ft_lstiter.c \
-				ft_lstlast.c \
-				ft_lstmap.c \
-				ft_lstnew.c \
-				ft_lstsize.c
-
-OBJS_BONUS = 	${SRCS_BONUS:.c=.o}
-
-NAME = libft.a
-
-ifdef WITH_BONUS
-	TOTAL_OBJS = $(OBJS) $(OBJS_BONUS)
-else
-	TOTAL_OBJS = $(OBJS)
-endif
-
-${NAME} : ${TOTAL_OBJS}
-		ar -rsc ${NAME} ${TOTAL_OBJS}
-
+${NAME} : ${OBJS}
+		ar -rsc $@ $^
+	
 %.o :%.c
 	${CC} ${CFLAGS} -c -I. $< -o $@
 
 all : ${NAME}
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	make -C ${LIBFT_DIR} clean
+	rm -f ${OBJS} ${OBJS_BONUS}
 
 fclean: 
-	@$(MAKE) clean
-	rm -f  ${NAME}
+	make clean
+	rm -f ${NAME} ${LIBFT_NAME}
 
 re: 
-	@$(MAKE) fclean
-	@$(MAKE) all
+	make fclean
+	make all
 
 bonus:
 	@make WITH_BONUS=1
