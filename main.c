@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 		sorted_input = make_array_use_to_check(input_count, argc, argv_split);
 		array_free(argc, argv_split);
 		if (is_sorted(input_count, sorted_input) == 0)
-			do_push_swap(input_count, sorted_input);
+			do_push_swap1(input_count, sorted_input);
 		free(sorted_input);
 	}
 }
