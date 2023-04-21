@@ -28,7 +28,9 @@ int			is_sorted(int input_count, int *sorted_input);
 void		array_free(int argc, char ***argv_split);
 void		error_print(int argc, char ***argv_split, int flag);
 void		remove_contents(void *content);
-void		do_push_swap(int input_count, int *sorted_input);
+void		do_push_swap1(int input_count, int *sorted_input);
+void		do_push_swap2(int input_count, int *sorted_input,
+				t_dll *a, t_dll *b);
 void		make_stack(t_dll *a, int input_count, int *sorted_input);
 void		check_duplications(t_dll *a, int input_count, int *sorted_input);
 void		split_by_pivot(int input_count, int *sorted_input,

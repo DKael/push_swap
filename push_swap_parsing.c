@@ -39,7 +39,6 @@ void	check_non_numeric_character(int argc, char ***argv_split)
 	int		argv_idx;
 	int		split_idx;
 	int		idx;
-	char	temp;
 
 	argv_idx = -1;
 	while (++argv_idx < argc - 1)
@@ -48,15 +47,13 @@ void	check_non_numeric_character(int argc, char ***argv_split)
 		while (argv_split[argv_idx][++split_idx] != NULL)
 		{
 			idx = 0;
-			temp = argv_split[argv_idx][split_idx][idx];
-			if (temp == '-' || temp == '+')
-			{
-				temp = argv_split[argv_idx][split_idx][idx + 1];
-				if (temp == '\0')
+			if (argv_split[argv_idx][split_idx][idx] == '-'
+				|| argv_split[argv_idx][split_idx][idx] == '+')
+				if (argv_split[argv_idx][split_idx][idx + 1] == '\0')
 					error_print(argc, argv_split, 1);
-			}
 			while (argv_split[argv_idx][split_idx][++idx] != '\0')
-				if ('0' > temp || temp > '9')
+				if ('0' > argv_split[argv_idx][split_idx][idx]
+					|| argv_split[argv_idx][split_idx][idx] > '9')
 					error_print(argc, argv_split, 1);
 		}
 	}

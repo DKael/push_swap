@@ -31,12 +31,10 @@
 // 	}
 // }
 
-void	do_push_swap(int input_count, int *sorted_input)
+void	do_push_swap1(int input_count, int *sorted_input)
 {
 	t_dll	a;
 	t_dll	b;
-	int		a_rotate;
-	int		b_rotate;
 
 	dll_init(&a);
 	dll_init(&b);
@@ -44,20 +42,29 @@ void	do_push_swap(int input_count, int *sorted_input)
 	sorting(sorted_input, input_count);
 	check_duplications(&a, input_count, sorted_input);
 	if (a.size <= 3)
-		return (sort_2or3(&a));
-	split_by_pivot(input_count, sorted_input, &a, &b);
-	sort_2or3(&a);
-	while (b.size != 0)
+		sort_2or3(&a);
+	else
+		do_push_swap2(input_count, sorted_input, &a, &b);
+	dll_clear(&a, remove_contents);
+	dll_clear(&b, remove_contents);
+}
+
+void	do_push_swap2(int input_count, int *sorted_input, t_dll *a, t_dll *b)
+{
+	int	a_rotate;
+	int	b_rotate;
+
+	split_by_pivot(input_count, sorted_input, a, b);
+	sort_2or3(a);
+	while (b->size != 0)
 	{
 		a_rotate = 0;
 		b_rotate = 0;
-		find_minimum_rotate(&a, &b, &a_rotate, &b_rotate);
-		do_rotate1(a_rotate, b_rotate, &a, &b);
-		pa(&a, &b);
+		find_minimum_rotate(a, b, &a_rotate, &b_rotate);
+		do_rotate1(a_rotate, b_rotate, a, b);
+		pa(a, b);
 	}
-	finish_step(&a);
-	dll_clear(&a, remove_contents);
-	dll_clear(&b, remove_contents);
+	finish_step(a);
 }
 
 void	make_stack(t_dll *a, int input_count, int *sorted_input)
@@ -73,6 +80,7 @@ void	make_stack(t_dll *a, int input_count, int *sorted_input)
 		if (dtemp == NULL)
 		{
 			dll_clear(a, remove_contents);
+			free(sorted_input);
 			exit(1);
 		}
 		*ctemp = sorted_input[idx];
@@ -80,6 +88,7 @@ void	make_stack(t_dll *a, int input_count, int *sorted_input)
 		if (dtemp == NULL)
 		{
 			dll_clear(a, remove_contents);
+			free(sorted_input);
 			exit(1);
 		}
 		dll_add_tail(a, dtemp);
@@ -96,7 +105,8 @@ void	check_duplications(t_dll *a, int input_count, int *sorted_input)
 		if (sorted_input[idx] == sorted_input[idx + 1])
 		{
 			dll_clear(a, remove_contents);
-			write(1, "Error\n", 6);
+			free(sorted_input);
+			write(2, "Error\n", 6);
 			exit(1);
 		}
 	}
@@ -127,12 +137,4 @@ void	split_by_pivot(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 	}
 	while (a->size > 3)
 		pb(a, b);
-}
-
-int	compare_func(t_dllnode *n1, t_dllnode *n2)
-{
-	if (*(int *)n1->contents > *(int *)n2->contents)
-		return (1);
-	else
-		return (0);
 }

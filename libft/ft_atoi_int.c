@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 #include <limits.h>
 
-int ft_atoi_int(const char *str)
+int	ft_atoi_int(const char *str)
 {
-	int idx;
-	int sign;
-	int nb;
+	int	idx;
+	int	sign;
+	int	nb;
 
 	idx = 0;
 	sign = 1;
@@ -27,7 +27,9 @@ int ft_atoi_int(const char *str)
 			sign = -1;
 	while ('0' <= str[idx] && str[idx] <= '9')
 	{
-		if (nb > INT_MAX / 10 || (nb == (INT_MAX / 10) && str[idx] - '0' > (INT_MAX % 10) - ((sign - 1) / 2)))
+		if (nb > INT_MAX / 10
+			|| (nb == (INT_MAX / 10)
+				&& str[idx] - '0' > (INT_MAX % 10) - ((sign - 1) / 2)))
 			return (0);
 		nb = nb * 10 + (str[idx++] - '0');
 	}

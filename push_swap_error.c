@@ -30,7 +30,7 @@ void	array_free(int argc, char ***argv_split)
 void	error_print(int argc, char ***argv_split, int flag)
 {
 	if (flag == 1)
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 	array_free(argc, argv_split);
 	exit(1);
 }

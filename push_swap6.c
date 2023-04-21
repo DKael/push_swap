@@ -38,3 +38,11 @@ void	finish_step(t_dll *a)
 		}
 	}
 }
+
+int	compare_func(t_dllnode *n1, t_dllnode *n2)
+{
+	if (*(int *)n1->contents > *(int *)n2->contents)
+		return (1);
+	else
+		return (0);
+}
