@@ -51,7 +51,7 @@ t_bool	dll_is_in(t_dll *dll, t_dllnode *check)
 	return (false);
 }
 
-t_dllnode	*dll_find(t_dll *dll, void *contents, int (*f)(void *, void *))
+t_dllnode	*dll_find(t_dll *dll, void *contents, t_bool (*f)(void *, void *))
 {
 	t_dllnode	*next_node;
 
@@ -60,6 +60,7 @@ t_dllnode	*dll_find(t_dll *dll, void *contents, int (*f)(void *, void *))
 	{
 		if (f(contents, next_node->contents) == true)
 			return (next_node);
+		next_node = next_node->back;
 	}
 	return (NULL);
 }

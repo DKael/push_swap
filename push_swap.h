@@ -19,6 +19,22 @@
 # include <stdlib.h>
 # include <limits.h>
 
+typedef struct s_r_info
+{
+	int	calc_rotate;
+	int	flag;
+	int	a_check;
+	int	b_check;
+	int	a_size;
+	int	b_size;
+}	t_r_info;
+
+typedef struct s_pivot
+{
+	int pivot1;
+	int pivot2;
+}	t_pivot;
+
 char		***argument_split(int argc, char **argv);
 void		check_non_numeric_character(int argc, char ***argv_split);
 int			count_total_numeric_input(int argc, char ***argv_split);
@@ -33,14 +49,15 @@ void		do_push_swap2(int input_count, int *sorted_input,
 				t_dll *a, t_dll *b);
 void		make_stack(t_dll *a, int input_count, int *sorted_input);
 void		check_duplications(t_dll *a, int input_count, int *sorted_input);
-void		split_by_pivot(int input_count, int *sorted_input,
+t_pivot		split_by_pivot(int input_count, int *sorted_input,
 				t_dll *a, t_dll *b);
 int			compare_func(t_dllnode *n1, t_dllnode *n2);
 void		sort_2or3(t_dll *a);
 void		case2(t_dll *a);
 void		case3(t_dll *a);
 void		find_minimum_rotate(t_dll *a, t_dll *b,
-				int *a_rotate, int *b_rotate);
+				int *a_rotate, int *b_rotate, int pivot);
+void		find_minimum_rotate1(t_dll *a, t_dll *b, int *a_rotate, int *b_rotate);
 int			find_a_check1(t_dll *a, int num);
 int			find_a_check2(t_dll *a, int num, t_dllnode *a_node);
 int			find_a_check3(t_dll *a, int num, t_dllnode *a_node);
