@@ -11,25 +11,25 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-#include <stdio.h>
-void print_stack(t_dll *a, t_dll *b)
-{
-	t_dllnode *dtemp;
-	fprintf(stderr, "\na stack : ");
-	dtemp = a->head.back;
-	while (dtemp != &(a->tail))
-	{
-		fprintf(stderr, "%d ", *(int *)dtemp->contents);
-		dtemp = dtemp->back;
-	}
-	fprintf(stderr, "\nb stack : ");
-	dtemp = b->head.back;
-	while (dtemp != &(b->tail))
-	{
-		fprintf(stderr, "%d ", *(int *)dtemp->contents);
-		dtemp = dtemp->back;
-	}
-}
+// #include <stdio.h>
+// void print_stack(t_dll *a, t_dll *b)
+// {
+// 	t_dllnode *dtemp;
+// 	fprintf(stderr, "\na stack : ");
+// 	dtemp = a->head.back;
+// 	while (dtemp != &(a->tail))
+// 	{
+// 		fprintf(stderr, "%d ", *(int *)dtemp->contents);
+// 		dtemp = dtemp->back;
+// 	}
+// 	fprintf(stderr, "\nb stack : ");
+// 	dtemp = b->head.back;
+// 	while (dtemp != &(b->tail))
+// 	{
+// 		fprintf(stderr, "%d ", *(int *)dtemp->contents);
+// 		dtemp = dtemp->back;
+// 	}
+// }
 
 void	do_push_swap1(int input_count, int *sorted_input)
 {
@@ -49,26 +49,15 @@ void	do_push_swap1(int input_count, int *sorted_input)
 	dll_clear(&b, remove_contents);
 }
 
-t_bool f_larger(void *content, void *node_content)
-{
-	if (*(int *)node_content > *(int *)content)
-		return true;
-	else
-		return false;
-}
-
 void	do_push_swap2(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 {
 	int	a_rotate;
 	int	b_rotate;
-
 	t_pivot pivots;
 
 	pivots = split_by_pivot(input_count, sorted_input, a, b);
 	sort_2or3(a);
-	//print_stack(a,b);
-	//fprintf(stderr, "\npivot1, pivot2 : %d %d\n", pivots.pivot1, pivots.pivot2);
-	while (dll_find(b, &pivots.pivot2, f_larger) != NULL)
+	while ((pivots.above_pivot2)-- > 0)
 	{
 		a_rotate = 0;
 		b_rotate = 0;
@@ -76,7 +65,7 @@ void	do_push_swap2(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 		do_rotate1(a_rotate, b_rotate, a, b);
 		pa(a, b);
 	}
-	while (dll_find(b, &pivots.pivot1, f_larger) != NULL)
+	while ((pivots.above_pivot1)-- > 0)
 	{
 		a_rotate = 0;
 		b_rotate = 0;
@@ -93,7 +82,6 @@ void	do_push_swap2(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 		pa(a, b);
 	}
 	finish_step(a);
-	//print_stack(a,b);
 }
 
 void	make_stack(t_dll *a, int input_count, int *sorted_input)
@@ -145,21 +133,19 @@ t_pivot	split_by_pivot(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 {
 	int	temp;
 	int	idx;
-	int	pivot1;
-	int	pivot2;
 	t_pivot pivot;
 
 	idx = 0;
-	pivot1 = sorted_input[input_count / 3 - 1];
-	pivot2 = sorted_input[input_count * 2 / 3 - 1];
-	pivot.pivot1 = pivot1;
-	pivot.pivot2 = pivot2;
+	pivot.pivot2 = sorted_input[input_count * 2 / 3 - 1];
+	pivot.pivot1 = sorted_input[input_count / 3 - 1];
+	pivot.above_pivot2 = input_count - (input_count * 2 / 3) - 3;
+	pivot.above_pivot1 = input_count - (pivot.above_pivot2 + 3) - (input_count / 3);
 	while (++idx <= input_count)
 	{
 		temp = *((int *)a->head.back->contents);
-		if (temp > pivot2)
+		if (temp > pivot.pivot2)
 			ra(a);
-		else if (pivot1 < temp && temp <= pivot2)
+		else if (pivot.pivot1 < temp && temp <= pivot.pivot2)
 			pb(a, b);
 		else
 		{

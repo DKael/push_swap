@@ -33,6 +33,8 @@ typedef struct s_pivot
 {
 	int pivot1;
 	int pivot2;
+	int above_pivot2;
+	int above_pivot1;
 }	t_pivot;
 
 char		***argument_split(int argc, char **argv);
