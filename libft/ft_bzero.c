@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:30:16 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:30:17 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:28 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:28 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>

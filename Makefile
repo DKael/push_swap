@@ -3,13 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+         #
+#    By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/20 20:46:38 by dmkael            #+#    #+#              #
-#    Updated: 2023/04/20 20:46:40 by dmkael           ###   ########.fr        #
+#    Created: 2023/05/03 20:30:42 by hyungdki          #+#    #+#              #
+#    Updated: 2023/05/03 20:30:42 by hyungdki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 SRCS =	main.c \
 		push_swap_error.c \
 		push_swap_parsing.c \
@@ -19,6 +18,7 @@ SRCS =	main.c \
 		push_swap4.c \
 		push_swap5.c \
 		push_swap6.c \
+		push_swap7.c \
 		double_linked_list1.c \
 		double_linked_list2.c \
 		double_linked_list3.c \

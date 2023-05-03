@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap4.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 20:01:17 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 20:01:19 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:41 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:31:09 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -90,26 +90,26 @@ t_r_info	calc_minimum_rotate4(int a_size, int b_size, int a_idx, int b_idx)
 	return (info);
 }
 
-void	set_location(int *a_rotate, int *b_rotate, t_r_info info)
+void	set_location(t_rotate_count *r_count, t_r_info info)
 {
 	if (info.flag == 1 || info.flag == 4 || info.flag == 7)
 	{
-		*a_rotate = info.a_check;
-		*b_rotate = info.b_check;
+		r_count->a_rotate = info.a_check;
+		r_count->b_rotate = info.b_check;
 	}
 	else if (info.flag == 2 || info.flag == 5 || info.flag == 8)
 	{
-		*a_rotate = info.a_check - info.a_size;
-		*b_rotate = info.b_check - info.b_size;
+		r_count->a_rotate = info.a_check - info.a_size;
+		r_count->b_rotate = info.b_check - info.b_size;
 	}
 	else if (info.flag == 3)
 	{
-		*a_rotate = info.a_check;
-		*b_rotate = info.b_check - info.b_size;
+		r_count->a_rotate = info.a_check;
+		r_count->b_rotate = info.b_check - info.b_size;
 	}
 	else if (info.flag == 6)
 	{
-		*a_rotate = info.a_check - info.a_size;
-		*b_rotate = info.b_check;
+		r_count->a_rotate = info.a_check - info.a_size;
+		r_count->b_rotate = info.b_check;
 	}
 }

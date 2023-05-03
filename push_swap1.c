@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 20:01:05 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 20:01:06 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:34 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:30:59 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -51,37 +51,42 @@ void	do_push_swap1(int input_count, int *sorted_input)
 
 void	do_push_swap2(int input_count, int *sorted_input, t_dll *a, t_dll *b)
 {
-	int	a_rotate;
-	int	b_rotate;
-	t_pivot pivots;
+	t_pivot			pivots;
+	t_rotate_count	r_count;
 
 	pivots = split_by_pivot(input_count, sorted_input, a, b);
 	sort_2or3(a);
-	while ((pivots.above_pivot2)-- > 0)
-	{
-		a_rotate = 0;
-		b_rotate = 0;
-		find_minimum_rotate(a, b, &a_rotate, &b_rotate, pivots.pivot2);
-		do_rotate1(a_rotate, b_rotate, a, b);
-		pa(a, b);
-	}
-	while ((pivots.above_pivot1)-- > 0)
-	{
-		a_rotate = 0;
-		b_rotate = 0;
-		find_minimum_rotate(a, b, &a_rotate, &b_rotate, pivots.pivot1);
-		do_rotate1(a_rotate, b_rotate, a, b);
-		pa(a, b);
-	}
+	do_push_swap3(a, b, &pivots, &r_count);
 	while (b->size != 0)
 	{
-		a_rotate = 0;
-		b_rotate = 0;
-		find_minimum_rotate1(a, b, &a_rotate, &b_rotate);
-		do_rotate1(a_rotate, b_rotate, a, b);
+		r_count.a_rotate = 0;
+		r_count.b_rotate = 0;
+		find_minimum_rotate2(a, b, &r_count);
+		do_rotate1(r_count.a_rotate, r_count.b_rotate, a, b);
 		pa(a, b);
 	}
 	finish_step(a);
+}
+
+void	do_push_swap3(t_dll *a, t_dll *b,
+			t_pivot *pivots, t_rotate_count *r_count)
+{
+	while ((pivots->above_pivot2)-- > 0)
+	{
+		r_count->a_rotate = 0;
+		r_count->b_rotate = 0;
+		find_minimum_rotate1(a, b, r_count, pivots->pivot2);
+		do_rotate1(r_count->a_rotate, r_count->b_rotate, a, b);
+		pa(a, b);
+	}
+	while ((pivots->above_pivot1)-- > 0)
+	{
+		r_count->a_rotate = 0;
+		r_count->b_rotate = 0;
+		find_minimum_rotate1(a, b, r_count, pivots->pivot1);
+		do_rotate1(r_count->a_rotate, r_count->b_rotate, a, b);
+		pa(a, b);
+	}
 }
 
 void	make_stack(t_dll *a, int input_count, int *sorted_input)
@@ -127,33 +132,4 @@ void	check_duplications(t_dll *a, int input_count, int *sorted_input)
 			exit(1);
 		}
 	}
-}
-
-t_pivot	split_by_pivot(int input_count, int *sorted_input, t_dll *a, t_dll *b)
-{
-	int	temp;
-	int	idx;
-	t_pivot pivot;
-
-	idx = 0;
-	pivot.pivot2 = sorted_input[input_count * 2 / 3 - 1];
-	pivot.pivot1 = sorted_input[input_count / 3 - 1];
-	pivot.above_pivot2 = input_count - (input_count * 2 / 3) - 3;
-	pivot.above_pivot1 = input_count - (pivot.above_pivot2 + 3) - (input_count / 3);
-	while (++idx <= input_count)
-	{
-		temp = *((int *)a->head.back->contents);
-		if (temp > pivot.pivot2)
-			ra(a);
-		else if (pivot.pivot1 < temp && temp <= pivot.pivot2)
-			pb(a, b);
-		else
-		{
-			pb(a, b);
-			rb(b);
-		}
-	}
-	while (a->size > 3)
-		pb(a, b);
-	return pivot;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:29:32 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:29:33 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:33 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:33 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isascii(int c)

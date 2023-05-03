@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   double_linked_list.h                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 19:42:39 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 19:43:18 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:16:13 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:30:19 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef DOUBLE_LINKED_LIST_H
@@ -45,6 +45,7 @@ void		dll_swap_node(t_dllnode *node1, t_dllnode *node2);
 void		dll_clear(t_dll *dll, void (*del)(void *));
 t_dllnode	*dll_new_node(void *contents);
 void		dll_del_node(t_dll *dll, t_dllnode *node, void (*del)(void *));
-int			dll_node_compare(t_dllnode *n1, t_dllnode *n2, int (*compare)(t_dllnode *, t_dllnode *));
+int			dll_node_compare(t_dllnode *n1, t_dllnode *n2,
+				int (*compare)(t_dllnode *, t_dllnode *));
 
 #endif

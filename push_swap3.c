@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap3.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 20:01:14 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 20:01:15 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:39 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:31:06 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -81,4 +81,33 @@ int	find_a_check4(t_dll *a, int num, t_dllnode *a_node)
 		a_node = a_node->front;
 	}
 	return (a_temp);
+}
+
+t_pivot	split_by_pivot(int input_cnt, int *sorted_input, t_dll *a, t_dll *b)
+{
+	int		temp;
+	int		idx;
+	t_pivot	pivot;
+
+	idx = 0;
+	pivot.pivot2 = sorted_input[input_cnt * 2 / 3 - 1];
+	pivot.pivot1 = sorted_input[input_cnt / 3 - 1];
+	pivot.above_pivot2 = input_cnt - (input_cnt * 2 / 3) - 3;
+	pivot.above_pivot1 = input_cnt - (pivot.above_pivot2 + 3) - (input_cnt / 3);
+	while (++idx <= input_cnt)
+	{
+		temp = *((int *)a->head.back->contents);
+		if (temp > pivot.pivot2)
+			ra(a);
+		else if (pivot.pivot1 < temp && temp <= pivot.pivot2)
+			pb(a, b);
+		else
+		{
+			pb(a, b);
+			rb(b);
+		}
+	}
+	while (a->size > 3)
+		pb(a, b);
+	return (pivot);
 }

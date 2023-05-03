@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:29:43 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:29:45 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:35 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:35 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isprint(int c)

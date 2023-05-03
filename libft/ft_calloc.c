@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:32:34 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:32:35 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:30 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:30 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 17:26:25 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/28 17:26:26 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:52 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:52 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>

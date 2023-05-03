@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 21:49:36 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/28 21:49:37 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:44 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:44 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>

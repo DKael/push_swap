@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:32:42 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:32:44 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:56 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:56 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>

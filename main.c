@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 19:53:20 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 19:53:21 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:32 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:30:37 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"

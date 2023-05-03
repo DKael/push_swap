@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 20:11:59 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/28 20:12:00 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:41 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:41 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>

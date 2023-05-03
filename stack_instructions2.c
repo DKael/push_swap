@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_instructions2.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 19:59:12 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 19:59:14 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:16:08 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:31:35 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"

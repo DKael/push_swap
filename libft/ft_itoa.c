@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 12:05:31 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/28 12:05:32 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:36 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:36 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>

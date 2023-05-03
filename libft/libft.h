@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 18:08:14 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/28 18:09:13 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:28:09 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:28:10 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H

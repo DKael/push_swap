@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   quick_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 19:58:02 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 19:58:04 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:56 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:31:23 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "quick_sort.h"

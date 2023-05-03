@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:30:35 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:30:36 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:49 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:49 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   double_linked_list1.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 19:43:24 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 19:43:26 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:22 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:30:26 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "double_linked_list.h"

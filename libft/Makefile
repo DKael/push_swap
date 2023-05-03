@@ -3,13 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+         #
+#    By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/28 13:30:01 by hyungdki          #+#    #+#              #
-#    Updated: 2022/12/28 13:30:02 by hyungdki         ###   ########.fr        #
+#    Created: 2023/05/03 20:28:31 by hyungdki          #+#    #+#              #
+#    Updated: 2023/05/03 20:28:35 by hyungdki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror

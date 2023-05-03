@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap5.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 20:01:21 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 20:01:22 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:43 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:31:12 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"

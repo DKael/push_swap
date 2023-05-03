@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 19:38:14 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/23 19:38:15 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:28:05 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:28:05 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>

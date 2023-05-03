@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:30:25 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:30:26 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:48 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:48 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>

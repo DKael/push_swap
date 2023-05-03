@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:31:41 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:31:42 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:28:03 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:28:03 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>

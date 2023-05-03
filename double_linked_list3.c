@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   double_linked_list3.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmkael <hyungdki@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 19:44:10 by dmkael            #+#    #+#             */
-/*   Updated: 2023/04/20 19:44:13 by dmkael           ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:28 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:30:33 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "double_linked_list.h"
 
 void	dll_del_node(t_dll *dll, t_dllnode *node, void (*del)(void *))

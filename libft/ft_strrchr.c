@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:31:32 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:31:33 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:28:04 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:28:04 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 char	*ft_strrchr(const char *s, int c)

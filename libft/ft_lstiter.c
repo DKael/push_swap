@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 21:20:29 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/28 21:20:30 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:42 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:42 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

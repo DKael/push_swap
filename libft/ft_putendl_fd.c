@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 17:25:14 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/28 17:25:15 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:52 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:52 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>

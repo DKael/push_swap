@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyungdki <hyungdki@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:30:05 by hyungdki          #+#    #+#             */
-/*   Updated: 2022/11/21 16:30:07 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:27:50 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/03 20:27:50 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
