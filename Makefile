@@ -6,9 +6,10 @@
 #    By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 20:30:42 by hyungdki          #+#    #+#              #
-#    Updated: 2023/05/03 20:30:42 by hyungdki         ###   ########.fr        #
+#    Updated: 2023/05/03 20:41:18 by hyungdki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 SRCS =	main.c \
 		push_swap_error.c \
 		push_swap_parsing.c \
@@ -29,20 +30,9 @@ SRCS =	main.c \
 
 OBJS = 	${SRCS:.c=.o}
 
-# SRCS_BONUS =	ft_printf_bonus.c \
-# 				ft_printf_utils_bonus.c \
-# 				case_c_bonus.c \
-# 				case_d_and_i_bonus.c \
-# 				case_p_bonus.c \
-# 				case_percent_bonus.c \
-# 				case_s_bonus.c \
-# 				case_u_bonus.c \
-# 				case_x_bonus.c \
-# 				ft_itoa_hex_bonus.c \
-# 				ft_itoa_ptr_bonus.c \
-# 				ft_itoa_unsigned_bonus.c
+SRCS_BONUS =	main_bonus.c \
 
-# OBJS_BONUS = 	${SRCS_BONUS:.c=.o}
+OBJS_BONUS = 	${SRCS_BONUS:.c=.o}
 
 CC = cc
 
@@ -50,16 +40,16 @@ CFLAGS = -Wall -Wextra -Werror
 
 LDFLAGS = -L. -lft
 
-NAME = push_swap
-
 LIBFT_DIR = libft
 
 LIBFT_NAME = libft.a
 
 ifdef WITH_BONUS
 	TOTAL_OBJS = ${OBJS_BONUS}
+	NAME = checker
 else
 	TOTAL_OBJS = ${OBJS}
+	NAME = push_swap
 endif
 
 ${NAME} : ${TOTAL_OBJS}
