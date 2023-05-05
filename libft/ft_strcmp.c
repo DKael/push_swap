@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 20:28:03 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 17:28:09 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/04 17:28:17 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/04 17:38:17 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t			index;
+	int			index;
 	unsigned char	*p1;
 	unsigned char	*p2;
 
 	index = 0;
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
-	while (index < n)
-	{
-		if (p1[index] != p2[index])
-			return ((int)(p1[index] - p2[index]));
-		else if (p1[index] == '\0')
-			return (0);
+	while (p1[index] == p2[index]
+			&& p1[index] != '\0' && p2[index] != '\0')
 		index++;
-	}
-	return (0);
+	return ((int)(p1[index] - p2[index]));
 }

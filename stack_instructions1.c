@@ -6,9 +6,10 @@
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:59 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/03 20:31:31 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:38:59 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	sa(t_dll *a)

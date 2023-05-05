@@ -6,9 +6,10 @@
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:39 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/03 20:31:06 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:38:40 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	find_a_check1(t_dll *a, int num)

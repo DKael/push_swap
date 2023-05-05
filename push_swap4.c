@@ -6,9 +6,10 @@
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:41 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/03 20:31:09 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:38:42 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_r_info	calc_minimum_rotate1(int a_size, int b_size, int a_idx, int b_idx)

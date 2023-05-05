@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_error.c                                  :+:      :+:    :+:   */
+/*   push_swap_error_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:51 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/05 00:09:46 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:22:45 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	array_free(int argc, char ***argv_split)
 {

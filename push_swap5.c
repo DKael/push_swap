@@ -6,9 +6,10 @@
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:43 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/03 20:31:12 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:38:44 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	do_rotate1(int a_rotate, int b_rotate, t_dll *a, t_dll *b)

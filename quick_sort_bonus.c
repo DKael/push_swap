@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quick_sort.c                                       :+:      :+:    :+:   */
+/*   quick_sort_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:56 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 22:38:52 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:08:59 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "quick_sort.h"
+#include "quick_sort_bonus.h"
 
 void	sorting(int *lst, int size)
 {

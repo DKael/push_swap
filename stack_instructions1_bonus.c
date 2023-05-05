@@ -1,66 +1,73 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_instructions2.c                              :+:      :+:    :+:   */
+/*   stack_instructions1_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 20:16:08 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 22:39:03 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:15:59 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/04 18:14:49 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-void	ra(t_dll *a)
+void	sa(t_dll *a)
 {
-	t_dllnode	*temp;
-
-	write(1, "ra\n", 3);
 	if (a->size >= 2)
-	{
-		temp = a->head.back;
-		a->head.back->back->front = &(a->head);
-		a->head.back = a->head.back->back;
-		a->size--;
-		dll_add_tail(a, temp);
-	}
+		dll_swap_node(a->head.back, a->head.back->back);
 }
 
-void	rb(t_dll *b)
+void	sb(t_dll *b)
+{
+	if (b->size >= 2)
+		dll_swap_node(b->head.back, b->head.back->back);
+}
+
+void	ss(t_dll *a, t_dll *b)
+{
+	if (a->size >= 2)
+		dll_swap_node(a->head.back, a->head.back->back);
+	if (b->size >= 2)
+		dll_swap_node(b->head.back, b->head.back->back);
+}
+
+void	pa(t_dll *a, t_dll *b)
 {
 	t_dllnode	*temp;
 
-	write(1, "rb\n", 3);
 	if (b->size >= 2)
 	{
 		temp = b->head.back;
 		b->head.back->back->front = &(b->head);
 		b->head.back = b->head.back->back;
+		dll_add_head(a, temp);
 		b->size--;
-		dll_add_tail(b, temp);
+	}
+	else if (b->size == 1)
+	{
+		temp = b->head.back;
+		dll_add_head(a, temp);
+		dll_init(b);
 	}
 }
 
-void	rr(t_dll *a, t_dll *b)
+void	pb(t_dll *a, t_dll *b)
 {
 	t_dllnode	*temp;
-
-	write(1, "rr\n", 3);
+	
 	if (a->size >= 2)
 	{
 		temp = a->head.back;
 		a->head.back->back->front = &(a->head);
 		a->head.back = a->head.back->back;
+		dll_add_head(b, temp);
 		a->size--;
-		dll_add_tail(a, temp);
 	}
-	if (b->size >= 2)
+	else if (a->size == 1)
 	{
-		temp = b->head.back;
-		b->head.back->back->front = &(b->head);
-		b->head.back = b->head.back->back;
-		b->size--;
-		dll_add_tail(b, temp);
+		temp = a->head.back;
+		dll_add_head(b, temp);
+		dll_init(a);
 	}
 }

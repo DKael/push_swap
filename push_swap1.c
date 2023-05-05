@@ -6,9 +6,10 @@
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:34 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/03 20:30:59 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:37:41 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 // #include <stdio.h>
@@ -99,7 +100,7 @@ void	make_stack(t_dll *a, int input_count, int *sorted_input)
 	while (++idx < input_count)
 	{
 		ctemp = (int *)malloc(sizeof(int) * 1);
-		if (dtemp == NULL)
+		if (ctemp == NULL)
 		{
 			dll_clear(a, remove_contents);
 			free(sorted_input);

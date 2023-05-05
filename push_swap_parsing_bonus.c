@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_parsing.c                                :+:      :+:    :+:   */
+/*   push_swap_parsing_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:54 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 23:38:43 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 23:38:50 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-#include <stdio.h>
+#include "push_swap_bonus.h"
 
 char	***argument_split(int argc, char **argv)
 {
@@ -108,25 +106,4 @@ int	*make_array_use_to_check(int input_count, int argc, char ***argv_split)
 		}
 	}
 	return (sorted_input);
-}
-
-int	is_sorted(int input_count, int *sorted_input)
-{
-	int	is_sorted;
-	int	idx;
-
-	is_sorted = 1;
-	idx = -1;
-	while (++idx < input_count - 1)
-	{
-		if (sorted_input[idx] >= sorted_input[idx + 1])
-		{
-			is_sorted = 0;
-			break ;
-		}
-	}
-	if (is_sorted == 1)
-		return (1);
-	else
-		return (0);
 }

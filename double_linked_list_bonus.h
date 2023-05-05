@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   double_linked_list.h                               :+:      :+:    :+:   */
+/*   double_linked_list_bonus.h                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:16:13 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 22:37:51 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:22:26 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOUBLE_LINKED_LIST_H
-# define DOUBLE_LINKED_LIST_H
+#ifndef DOUBLE_LINKED_LIST_BONUS_H
+# define DOUBLE_LINKED_LIST_BONUS_H
 
 # include <stdlib.h>
 

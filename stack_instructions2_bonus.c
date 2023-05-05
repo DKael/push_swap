@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_instructions2.c                              :+:      :+:    :+:   */
+/*   stack_instructions2_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:16:08 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 22:39:03 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 18:14:59 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	ra(t_dll *a)
 {
 	t_dllnode	*temp;
 
-	write(1, "ra\n", 3);
 	if (a->size >= 2)
 	{
 		temp = a->head.back;
@@ -31,7 +30,6 @@ void	rb(t_dll *b)
 {
 	t_dllnode	*temp;
 
-	write(1, "rb\n", 3);
 	if (b->size >= 2)
 	{
 		temp = b->head.back;
@@ -46,7 +44,6 @@ void	rr(t_dll *a, t_dll *b)
 {
 	t_dllnode	*temp;
 
-	write(1, "rr\n", 3);
 	if (a->size >= 2)
 	{
 		temp = a->head.back;

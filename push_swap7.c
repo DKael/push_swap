@@ -6,9 +6,10 @@
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:48 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/03 20:31:19 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:38:47 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	find_minimum_rotate1(t_dll *a, t_dll *b,

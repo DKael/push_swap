@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 20:28:03 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 17:28:09 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/04 17:37:48 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/04 17:45:18 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strndup(char *src, size_t n)
 {
-	size_t			index;
-	unsigned char	*p1;
-	unsigned char	*p2;
+	size_t	index;
+	char	*replica;
 
+	replica = (char *)malloc(sizeof(char) * (n + 1));
+	if (replica == NULL)
+		return (NULL);
 	index = 0;
-	p1 = (unsigned char *)s1;
-	p2 = (unsigned char *)s2;
-	while (index < n)
+	while (src[index] != '\0' && index < n)
 	{
-		if (p1[index] != p2[index])
-			return ((int)(p1[index] - p2[index]));
-		else if (p1[index] == '\0')
-			return (0);
+		replica[index] = src[index];
 		index++;
 	}
-	return (0);
+	replica[index] = '\0';
+	return (replica);
 }

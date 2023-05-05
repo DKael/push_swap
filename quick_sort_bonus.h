@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   quick_sort_bonus.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 20:28:03 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 17:28:09 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/05/03 20:16:20 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/05/04 22:23:15 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef QUICK_SORT_BONUS_H
+# define QUICK_SORT_BONUS_H
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t			index;
-	unsigned char	*p1;
-	unsigned char	*p2;
+void	sorting(int *lst, int size);
+void	quick_sort(int *part, int left, int right);
+int		make_partition(int *part, int start, int end);
+void	swap(int *a, int *b);
 
-	index = 0;
-	p1 = (unsigned char *)s1;
-	p2 = (unsigned char *)s2;
-	while (index < n)
-	{
-		if (p1[index] != p2[index])
-			return ((int)(p1[index] - p2[index]));
-		else if (p1[index] == '\0')
-			return (0);
-		index++;
-	}
-	return (0);
-}
+#endif
