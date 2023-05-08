@@ -6,7 +6,7 @@
 /*   By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:15:59 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/05/04 18:14:49 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/05/08 14:14:19 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	pa(t_dll *a, t_dll *b)
 void	pb(t_dll *a, t_dll *b)
 {
 	t_dllnode	*temp;
-	
+
 	if (a->size >= 2)
 	{
 		temp = a->head.back;

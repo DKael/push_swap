@@ -6,7 +6,7 @@
 #    By: hyungdki <hyungdki@student.42seoul>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 20:30:42 by hyungdki          #+#    #+#              #
-#    Updated: 2023/05/04 22:43:46 by hyungdki         ###   ########.fr        #
+#    Updated: 2023/05/08 14:18:32 by hyungdki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,8 @@ OBJS = 	${SRCS:.c=.o}
 SRCS_BONUS =	main_bonus.c \
 				push_swap_error_bonus.c \
                 push_swap_parsing_bonus.c \
+				push_swap1_bonus.c \
+				push_swap2_bonus.c \
                 double_linked_list1_bonus.c \
                 double_linked_list2_bonus.c \
                 double_linked_list3_bonus.c \
@@ -40,6 +42,8 @@ SRCS_BONUS =	main_bonus.c \
                 stack_instructions2_bonus.c \
                 stack_instructions3_bonus.c \
                 quick_sort_bonus.c \
+				get_next_line_bonus.c \
+				get_next_line_utils_bonus.c \
 
 OBJS_BONUS = 	${SRCS_BONUS:.c=.o}
 
