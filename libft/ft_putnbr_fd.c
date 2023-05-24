@@ -9,6 +9,7 @@
 /*   Updated: 2023/05/03 20:27:52 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 static void	case_pos(int n, int digit, int fd);

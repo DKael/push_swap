@@ -12,26 +12,6 @@
 
 #include "push_swap.h"
 
-// #include <stdio.h>
-// void print_stack(t_dll *a, t_dll *b)
-// {
-// 	t_dllnode *dtemp;
-// 	fprintf(stderr, "\na stack : ");
-// 	dtemp = a->head.back;
-// 	while (dtemp != &(a->tail))
-// 	{
-// 		fprintf(stderr, "%d ", *(int *)dtemp->contents);
-// 		dtemp = dtemp->back;
-// 	}
-// 	fprintf(stderr, "\nb stack : ");
-// 	dtemp = b->head.back;
-// 	while (dtemp != &(b->tail))
-// 	{
-// 		fprintf(stderr, "%d ", *(int *)dtemp->contents);
-// 		dtemp = dtemp->back;
-// 	}
-// }
-
 void	do_push_swap1(int input_count, int *sorted_input)
 {
 	t_dll	a;

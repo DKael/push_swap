@@ -9,6 +9,7 @@
 /*   Updated: 2023/05/03 20:27:57 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	index;

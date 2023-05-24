@@ -24,13 +24,15 @@ char	***argument_split(int argc, char **argv)
 	while (++argv_idx < argc)
 	{
 		argv_split[argv_idx - 1] = ft_split(argv[argv_idx], ' ');
-		if (argv_split[argv_idx - 1] == NULL || argv[argv_idx][0] == '\0')
+		if (argv_split[argv_idx - 1] == NULL
+			|| argv_split[argv_idx - 1][0] == NULL)
 		{
-			if (argv[argv_idx][0] == '\0')
-				write(2, "Error\n", 6);
-			while (--argv_idx != 0)
+			if (argv_split[argv_idx - 1][0] == NULL)
+			{
 				free(argv_split[argv_idx - 1]);
-			free(argv_split);
+				write(2, "Error\n", 6);
+			}
+			array_free(argv_idx, argv_split);
 			exit(1);
 		}
 	}
