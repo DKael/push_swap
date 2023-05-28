@@ -18,7 +18,8 @@
 # include "quick_sort.h"
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
+
+# define INT_MAX 2147483647
 
 typedef struct s_r_info
 {
