@@ -50,27 +50,27 @@ void	do_push_swap2(t_dll_col *dll_col, int *sorted_input)
 
 int	exe_instr(t_dll_col *dll_col, char *contents)
 {
-	if (ft_strncmp(contents, "sa", 2) == 0)
+	if (ft_strcmp(contents, "sa\n") == 0)
 		sa(&dll_col->a);
-	else if (ft_strncmp(contents, "sb", 2) == 0)
+	else if (ft_strcmp(contents, "sb\n") == 0)
 		sb(&dll_col->b);
-	else if (ft_strncmp(contents, "ss", 2) == 0)
+	else if (ft_strcmp(contents, "ss\n") == 0)
 		ss(&dll_col->a, &dll_col->b);
-	else if (ft_strncmp(contents, "pa", 2) == 0)
+	else if (ft_strcmp(contents, "pa\n") == 0)
 		pa(&dll_col->a, &dll_col->b);
-	else if (ft_strncmp(contents, "pb", 2) == 0)
+	else if (ft_strcmp(contents, "pb\n") == 0)
 		pb(&dll_col->a, &dll_col->b);
-	else if (ft_strncmp(contents, "rra", 3) == 0)
+	else if (ft_strcmp(contents, "rra\n") == 0)
 		rra(&dll_col->a);
-	else if (ft_strncmp(contents, "rrb", 3) == 0)
+	else if (ft_strcmp(contents, "rrb\n") == 0)
 		rrb(&dll_col->b);
-	else if (ft_strncmp(contents, "rrr", 3) == 0)
+	else if (ft_strcmp(contents, "rrr\n") == 0)
 		rrr(&dll_col->a, &dll_col->b);
-	else if (ft_strncmp(contents, "ra", 2) == 0)
+	else if (ft_strcmp(contents, "ra\n") == 0)
 		ra(&dll_col->a);
-	else if (ft_strncmp(contents, "rb", 2) == 0)
+	else if (ft_strcmp(contents, "rb\n") == 0)
 		rb(&dll_col->b);
-	else if (ft_strncmp(contents, "rr", 2) == 0)
+	else if (ft_strcmp(contents, "rr\n") == 0)
 		rr(&dll_col->a, &dll_col->b);
 	else
 		return (1);
