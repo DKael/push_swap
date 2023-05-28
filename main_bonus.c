@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	int		input_count;
 	char	***argv_split;
 	int		*sorted_input;
-	
+
 	if (argc != 1)
 	{
 		argv_split = argument_split(argc, argv);
