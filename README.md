@@ -79,9 +79,11 @@ bash
 
 ## 7️⃣ 기술 스택
 	•	언어: C
+  	•	운영체제/환경: Unix/Linux
+ 	•	빌드 도구: GNU Make
+ 	•	Coding Conventions: Norminette
 	•	알고리즘: Quick Sort + Greedy Hybrid, Hard-coded small sort
-	•	자료구조: Stack (배열/연결 리스트), Doubly Linked List
-	•	빌드 도구: Makefile
+	•	자료구조: Deque (배열/연결 리스트), Doubly Linked List
 	•	테스트 도구: 자체 checker 프로그램
 
  ## 8️⃣ 참고 사항
